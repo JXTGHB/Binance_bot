@@ -1,0 +1,9 @@
+services:
+  binance_line_bot:
+    build: .
+    container_name: binance_line_bot
+    env_file: .env
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    working_dir: /app
