@@ -3,3 +3,4 @@ uvicorn
 python-binance
 line-bot-sdk
 python-dotenv
+binance-connector
