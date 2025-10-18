@@ -89,10 +89,10 @@ def get_asset():
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Binance API 呼叫失敗: {str(e)}")
 
-@app.get("/env")
-def check_env():
+# @app.get("/env")
+# def check_env():
 
-    return {
-        "BINANCE_API_KEY": os.getenv("BINANCE_API_KEY"),
-        "BINANCE_API_SECRET": os.getenv("BINANCE_API_SECRET")
-    }
+#     return {
+#         "BINANCE_API_KEY": os.getenv("BINANCE_API_KEY"),
+#         "BINANCE_API_SECRET": os.getenv("BINANCE_API_SECRET")
+#     }

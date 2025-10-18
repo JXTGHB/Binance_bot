@@ -1,7 +1,7 @@
 # -------------------------------
 # Dockerfile
 # -------------------------------
-FROM python:3.11-slim
+FROM python:3.11-bullseye
 
 # 設定工作目錄
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY requirements.txt .
 
 # 安裝必要套件
 RUN pip install --no-cache-dir -r requirements.txt
-
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl && update-ca-certificates
 # 複製專案程式碼
 COPY . /app
 
